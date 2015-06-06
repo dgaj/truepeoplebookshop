@@ -1,0 +1,7 @@
+<% provide(:title, @user.name) %>
+
+<div class="row" id="user-container">	
+	<div class="small-12 medium-8 large-5 columns">
+		<%= render partial: "profile", locals: {user: @user} %>
+	</div>	
+</div>	

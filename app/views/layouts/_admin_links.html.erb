@@ -1,0 +1,51 @@
+      <li class="divider"></li>
+      <li>
+        <%= link_to root_path do %>
+          <i class="fi-home"></i>&nbsp;&nbsp;Home
+        <% end %>
+      </li>
+      <li class="divider"></li>  
+      <li class="has-dropdown">
+        <%= link_to "People", "#" %>
+        <ul class="dropdown">
+          <li><%= link_to "Users", users_path %></li>
+        </ul>
+      </li>        
+      <li class="divider"></li>  
+      <li class="has-dropdown">
+        <%= link_to "Places", "#" %>
+        <ul class="dropdown">     
+          <li><%= link_to "Link 1", "#" %></li>                  
+          <li class="has-dropdown">
+            <%= link_to "Link 2", "#" %>
+            <ul class="dropdown">                                   
+              <li><%= link_to "Link 2a", "#" %></li>
+              <li><%= link_to "Link 2b", "#" %></li>
+              <li><%= link_to "Link 2c", "#" %></li>
+            </ul>    
+          </li>                         
+        </ul>
+      </li>      
+      <li class="divider"></li>      
+      <li class="has-dropdown">
+        <%= link_to "Me", "#" %>
+        <ul class="dropdown">
+          <li>
+            <%= link_to user_path(current_user) do %>
+              <i class="fi-torso"></i>&nbsp;&nbsp;Profile
+            <% end %>
+          </li>          
+          <li>
+            <%= link_to edit_user_path(current_user) do %>
+              <i class="fi-widget"></i>&nbsp;&nbsp;Settings
+            <% end %>
+          </li>          
+        </ul>
+      </li>
+      <li class="divider"></li>
+      <li>
+        <%= link_to logout_path, method: "delete" do %>
+          <i class="fi-lock"></i>&nbsp;&nbsp;Logout
+        <% end %>
+      </li> 
+      

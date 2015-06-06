@@ -1,0 +1,90 @@
+<% provide(:title, "User Settings") %>
+
+<div class="row">
+  <div class="small-12 large-6 large-centered columns user panel clearfix"> 	
+    <%= form_for(@user, html: { multipart: true }) do |f| %>
+
+      <div class="row">
+        <div class="small-12 columns">
+          <h1 class="panel-title text-center">User Settings</h1>
+        </div>
+      </div>    
+
+			<%= render 'shared/error_messages', object: f.object %>
+
+      <div class="row">
+        <div class="small-4 columns">
+          <%= f.label :picture, "Picture", class: "right inline" %>
+        </div>        
+        <div class="small-8 columns">
+          <span class="picture">
+            <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
+          </span>
+        </div>
+      </div> 
+
+		  <div class="row">
+        <div class="small-4 columns">
+        	<%= f.label :name, "Name", class: "right inline" %>
+        </div>
+        <div class="small-8 columns">
+          <%= f.text_field :name, placeholder: "Your Name" %>
+        </div>
+		  </div>
+
+		  <div class="row">
+        <div class="small-4 columns">
+        	<%= f.label :email, "Email", class: "right inline" %>
+        </div>
+        <div class="small-8 columns">
+          <%= f.email_field :email, placeholder: "Your Email" %>
+        </div>
+		  </div>
+
+		  <div class="row">
+        <div class="small-4 columns">
+        	<%= f.label :password, "Password",
+        	 		class: "right inline" %>
+        </div>
+        <div class="small-8 columns">
+          <%= f.password_field :password, placeholder: "your secret password" %>
+        </div>
+		  </div>
+
+		  <div class="row">
+        <div class="small-4 columns">
+        	<%= f.label :password_confirmation, "Password Confirm",
+        	 		class: "right inline" %>
+        </div>
+        <div class="small-8 columns">
+          <%= f.password_field :password_confirmation, placeholder: "confirm your secret password" %>
+        </div>
+		  </div>
+
+      <div class="row panel-links">
+        <div class="small-12 columns">
+  				<ul class="button-group even-2">
+  					<li>
+  						<%= link_to "<< Back", request.referrer, 
+  																class: "primary button" %>	
+  					</li>      	
+          	<li>
+          		<%= f.submit "Save Changes", class: "success button" %>
+          	</li>
+          </ul>	
+        </div>
+      </div>
+        
+    <% end %>
+  </div>
+</div>  
+
+
+<script type="text/javascript">
+  $('#user_picture').bind('change', function() {
+    size_in_megabytes = this.files[0].size/1024/1024;
+    if (size_in_megabytes > 5) {
+      alert('Maximum file size is 5MB. Please choose a smaller file.');
+    }
+  });
+</script>

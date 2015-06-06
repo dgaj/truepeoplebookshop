@@ -1,0 +1,70 @@
+<% provide(:title, "Sign Up") %>
+
+
+<div class="row">
+  <div class="small-12 large-6 large-centered columns user panel clearfix"> 	
+    <%= form_for(@user) do |f| %>
+
+			<%= render 'shared/error_messages', object: f.object %>
+
+      <div class="row">
+        <div class="small-12 columns">
+          <h1 class="panel-title text-center">Sign Up</h1>
+        </div>
+      </div>  
+
+		  <div class="row">
+        <div class="small-4 columns">
+        	<%= f.label :name, "Name", class: "right inline" %>
+        </div>
+        <div class="small-8 columns">
+          <%= f.text_field :name, placeholder: "Your Name" %>
+        </div>
+		  </div>
+
+		  <div class="row">
+        <div class="small-4 columns">
+        	<%= f.label :email, "Email", class: "right inline" %>
+        </div>
+        <div class="small-8 columns">
+          <%= f.email_field :email, placeholder: "Your Email" %>
+        </div>
+		  </div>
+
+		  <div class="row">
+        <div class="small-4 columns">
+        	<%= f.label :password, "Password",
+        	 		class: "right inline" %>
+        </div>
+        <div class="small-8 columns">
+          <%= f.password_field :password, placeholder: "your secret password" %>
+        </div>
+		  </div>
+
+		  <div class="row">
+        <div class="small-4 columns">
+        	<%= f.label :password_confirmation, "Password Confirm",
+        	 		class: "right inline" %>
+        </div>
+        <div class="small-8 columns">
+          <%= f.password_field :password_confirmation, placeholder: "confirm your secret password" %>
+        </div>
+		  </div>
+
+      <div class="row panel-links">
+        <div class="small-12 columns">
+  				<ul class="button-group even-2">
+  					<li>
+  						<%= link_to "Home", root_path, 
+  																class: "primary button" %>	
+  					</li>      	
+          	<li>
+          		<%= f.submit "Sign Up", class: "success button" %>
+          	</li>
+          </ul>	
+        </div>
+      </div>  
+
+    <% end %>
+  </div>
+</div>  

@@ -1,0 +1,465 @@
+
+/* sass color variables */
+
+$white:     rgb(255,255,255);
+
+$lightestGrey:   rgb(200,200,200);
+$lighterGrey:    rgb(160,160,160);
+$lightGrey:      rgb(130,130,130);
+$grey:           rgb(100,100,100);
+$darkGrey:       rgb(90,90,90);
+$darkerGrey:     rgb(60,60,60);
+$darkestGrey:    rgb(30,30,30);
+
+$lightestRed: rgb(250,0,0);
+$lighterRed:  rgb(220,0,0);
+$lightRed:    rgb(190,0,0);
+$red:         rgb(160,0,0);
+$darkRed:     rgb(130,0,0);
+$darkerRed:   rgb(100,0,0);
+$darkestRed:  rgb(70,0,0);
+
+$lightestOrange:   rgb(255,145,0);
+$lighterOrange:   rgb(245,135,0);
+$lightOrange:     rgb(235,125,0);
+$orange:           rgb(225,115,0);
+$darkOrange:      rgb(215,105,0);
+$darkerOrange:    rgb(205,95,0);
+$darkestOrange:    rgb(195,85,0);
+
+$lightestYellow:   rgb(255,255,0);
+$lighterYellow:   rgb(245,245,0);
+$lightYellow:     rgb(235,235,0);
+$yellow:           rgb(225,225,0);
+$darkYellow:      rgb(215,215,0);
+$darkerYellow:    rgb(205,205,0);
+$darkestYellow:    rgb(195,195,0);
+
+$lightestGreen:    rgb(0,250,0);
+$lighterGreen:    rgb(0,220,0);
+$lightGreen:      rgb(0,190,0);
+$green:           rgb(0,160,0);
+$darkGreen:        rgb(0,130,0);
+$darkerGreen:      rgb(0,100,0);
+$darkestGreen:    rgb(0,70,0);
+
+$lightestBlue:  rgb(0,100,250);
+$lighterBlue:    rgb(0,80,220);
+$lightBlue:      rgb(0,60,190);
+$blue:           rgb(0,40,160);
+$darkBlue:      rgb(0,20,130);
+$darkerBlue:    rgb(0,0,100);
+$darkestBlue:    rgb(0,0,70);
+
+$lightestPurple:  rgb(250,0,250);
+$lighterPurple:    rgb(220,0,220);
+$lightPurple:      rgb(190,0,190);
+$purple:           rgb(160,0,160);
+$darkPurple:      rgb(130,0,130);
+$darkerPurple:    rgb(100,0,100);
+$darkestPurple:    rgb(70,0,70);
+
+/* end sass color variables */
+
+
+
+
+
+
+
+
+
+/* sass gradient mixins */
+
+@mixin gradient-vertical($light, $medium, $dark) {
+  background: $medium;
+  background: -moz-linear-gradient(top,  $light 0%, $medium 44%, $dark 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$light), color-stop(44%,$medium), color-stop(100%,$dark));
+  background: -webkit-linear-gradient(top,  $light 0%,$medium 44%,$dark 100%);
+  background: -o-linear-gradient(top,  $light 0%,$medium 44%,$dark 100%);
+  background: -ms-linear-gradient(top,  $light 0%,$medium 44%,$dark 100%);
+  background: linear-gradient(to bottom,  $light 0%,$medium 44%,$dark 100%);
+}
+
+@mixin gradient-horizontal($light, $medium, $dark) {
+  background: $medium;
+  background: -moz-linear-gradient(left,  $light 0%, $medium 44%, $dark 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,$light), color-stop(44%,$medium), color-stop(100%,$dark));
+  background: -webkit-linear-gradient(left,  $light 0%,$medium 44%,$dark 100%);
+  background: -o-linear-gradient(left,  $light 0%,$medium 44%,$dark 100%);
+  background: -ms-linear-gradient(left,  $light 0%,$medium 44%,$dark 100%);
+  background: linear-gradient(to right,  $light 0%,$medium 44%,$dark 100%);
+}
+
+@mixin gradient-diagonal($light, $medium, $dark) {
+  background: $medium;
+  background: -moz-linear-gradient(-45deg,  $light 0%, $medium 44%, $dark 100%);
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,$light), color-stop(44%,$medium), color-stop(100%,$dark));
+  background: -webkit-linear-gradient(-45deg,  $light 0%,$red 44%,$dark 100%);
+  background: -o-linear-gradient(-45deg,  $light 0%,$medium 44%,$dark 100%);
+  background: -ms-linear-gradient(-45deg,  $light 0%,$medium 44%,$dark 100%);
+  background: linear-gradient(135deg,  $light 0%,$medium 44%,$dark 100%);
+}
+
+@mixin gradient-radial($light, $medium, $dark) {
+  background: $medium;
+  background: -moz-radial-gradient(center, ellipse cover,  $light 0%, $medium 44%, $dark 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,$light), color-stop(44%,$medium), color-stop(100%,$dark));
+  background: -webkit-radial-gradient(center, ellipse cover,  $light 0%,$medium 44%,$dark 100%);
+  background: -o-radial-gradient(center, ellipse cover,  $light 0%,$medium 44%,$dark 100%);
+  background: -ms-radial-gradient(center, ellipse cover,  $light 0%,$medium 44%,$dark 100%);
+  background: radial-gradient(ellipse at center,  $light 0%,$medium 44%,$dark 100%);
+}
+
+/* end sass gradient mixins */
+
+
+
+
+
+
+
+
+
+
+/* css gradient classes*/
+
+.white  { background: $white;  }
+
+/* Grey */
+.lightestGrey   { background: $lightestGrey;}
+.lighterGrey     { background: $lighterGrey;}
+.lightGrey       { background: $lightGrey;}
+.grey           { background: $grey;    }
+.darkGrey       { background: $darkGrey;}
+.darkerGrey     { background: $darkerGrey;}
+.darkestGrey     { background: $darkestGrey;}
+
+.grey-gv { @include gradient-vertical($lightestGrey,$lighterGrey,$lightGrey); }
+.grey-gh { @include gradient-horizontal($lightestGrey,$lighterGrey,$lightGrey); }
+.grey-gd { @include gradient-diagonal($lightestGrey,$lighterGrey,$lightGrey); }
+.grey-gr { @include gradient-radial($lightestGrey,$lighterGrey,$lightGrey); }
+
+
+/* Red */
+.lightestRed   { background: $lightestRed;}
+.lighterRed   { background: $lighterRed;}
+.lightRed     { background: $lightRed;}
+.red           { background: $red;    }
+.darkRed       { background: $darkRed;}
+.darkerRed     { background: $darkerRed;}
+.darkestRed   { background: $darkestRed;}
+
+.red-gv { @include gradient-vertical($lightRed,$red,$darkRed); }
+.red-gh { @include gradient-horizontal($lightRed,$red,$darkRed); }
+.red-gd { @include gradient-diagonal($lightRed,$red,$darkRed); }
+.red-gr { @include gradient-radial($lightRed,$red,$darkRed); }
+
+/* Orange */
+.lightestOrange   { background: $lightestOrange;}
+.lighterOrange     { background: $lighterOrange;}
+.lightOrange       { background: $lightOrange;}
+.orange           { background: $orange;    }
+.darkOrange       { background: $darkOrange;}
+.darkerOrange      { background: $darkerOrange;}
+.darkestOrange    { background: $darkestOrange;}
+
+.orange-gv { @include gradient-vertical($lightestOrange,$lightOrange,$orange); }
+.orange-gh { @include gradient-horizontal($lightestOrange,$lightOrange,$orange); }
+.orange-gd { @include gradient-diagonal($lightestOrange,$lightOrange,$orange); }
+.orange-gr { @include gradient-radial($lightestOrange,$lightOrange,$orange); }
+
+/* Yellow */
+.lightestYellow   { background: $lightestYellow;}
+.lighterYellow     { background: $lighterYellow;}
+.lightYellow       { background: $lightYellow;}
+.yellow           { background: $yellow;    }
+.darkYellow       { background: $darkYellow;}
+.darkerYellow      { background: $darkerYellow;}
+.darkestYellow    { background: $darkestYellow;}
+
+.yellow-gv { @include gradient-vertical($lightestYellow,$lightYellow,$darkYellow); }
+.yellow-gh { @include gradient-horizontal($lightestYellow,$lightYellow,$darkYellow); }
+.yellow-gd { @include gradient-diagonal($lightestYellow,$lightYellow,$darkYellow); }
+.yellow-gr { @include gradient-radial($lightestYellow,$lightYellow,$darkYellow); }
+
+
+/* Green */
+.lightestGreen     { background: $lightestGreen;}
+.lighterGreen     { background: $lighterGreen;}
+.lightGreen       { background: $lightGreen;}
+.green             { background: $green;    }
+.darkGreen         { background: $darkGreen;}
+.darkerGreen      { background: $darkerGreen;}
+.darkestGreen      { background: $darkestGreen;}
+
+.green-gv { @include gradient-vertical($green,$darkGreen,$darkerGreen); }
+.green-gh { @include gradient-horizontal($lightGreen,$green,$darkGreen); }
+.green-gd { @include gradient-diagonal($lightGreen,$green,$darkGreen); }
+.green-gr { @include gradient-radial($lightGreen,$green,$darkGreen); }
+
+
+/* Blue */
+.lightestBlue   { background: $lightestBlue;}
+.lighterBlue     { background: $lighterBlue;}
+.lightBlue       { background: $lightBlue;}
+.blue           { background: $blue;    }
+.darkBlue       { background: $darkBlue;}
+.darkerBlue      { background: $darkerBlue;}
+.darkestBlue    { background: $darkestBlue;}
+
+.blue-gv { @include gradient-vertical($lighterBlue,$lightBlue,$blue); }
+.blue-gh { @include gradient-horizontal($lighterBlue,$lightBlue,$blue); }
+.blue-gd { @include gradient-diagonal($lighterBlue,$lightBlue,$blue); }
+.blue-gr { @include gradient-radial($lighterBlue,$lightBlue,$blue); }
+
+
+/* Purple */
+.lightestPurple   { background: $lightestPurple;}
+.lighterPurple     { background: $lighterPurple;}
+.lightPurple       { background: $lightPurple;}
+.purple           { background: $purple;    }
+.darkPurple       { background: $darkPurple;}
+.darkerPurple      { background: $darkerPurple;}
+.darkestPurple    { background: $darkestPurple;}
+
+.purple-gv { @include gradient-vertical($lightPurple,$purple,$darkPurple); }
+.purple-gh { @include gradient-horizontal($lightPurple,$purple,$darkPurple); }
+.purple-gd { @include gradient-diagonal($lightPurple,$purple,$darkPurple); }
+.purple-gr { @include gradient-radial($lightPurple,$purple,$darkPurple); }
+
+
+
+.lightestGrey.button, .lighterGrey.button, .lightGrey.button, .grey.button,
+.darkGrey.button, .darkerGrey.button, .darkestGrey.button,
+.lightestRed.button, .lighterRed.button, .lightRed.button, .red.button,
+.darkRed.button, .darkerRed.button, .darkestRed.button,
+.lightestOrange.button, .lighterOrange.button, .lightOrange.button, .orange.button,
+.darkOrange.button, .darkerOrange.button, .darkestOrange.button,
+.lightestYellow.button, .lighterYellow.button, .lightYellow.button, .yellow.button,
+.darkYellow.button, .darkerYellow.button, .darkestYellow.button,
+.lightestGreen.button, .lighterGreen.button, .lightGreen.button, .green.button,
+.darkGreen.button, .darkerGreen.button, .darkestGreen.button,
+.lightestBlue.button, .lighterBlue.button, .lightBlue.button, .blue.button,
+.darkBlue.button, .darkerBlue.button, .darkestBlue.button,
+.lightestPurple.button, .lighterPurple.button, .lightPurple.button, .purple.button,
+.darkPurple.button, .darkerPurple.button, .darkestPurple.button,
+.grey-gv.button, .grey-gh.button, .grey-gd.button, .grey-gr.button,
+.red.button, .red-gv.button, .red-gh.button, .red-gd.button, .red-gr.button,
+.orange.button, .orange-gv.button, .orange-gh.button, .orange-gd.button, .orange-gr.button,
+.yellow.button, .yellow-gv.button, .yellow-gh.button, .yellow-gd.button, .yellow-gr.button,
+.green.button, .green-gv.button, .green-gh.button, .green-gd.button, .green-gr.button,
+.blue.button, .blue-gv.button, .blue-gh.button, .blue-gd.button, .blue-gr.button,
+.purple.button, .purple-gv.button, .purple-gh.button, .purple-gd.button, .purple-gr.button,
+.white.panel {
+  border: 1px solid $oil;
+  &:hover {
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    background: white;
+    color: $oil;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Global Styles */
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin: 0 0 45px; /* bottom = footer height */
+}
+
+.page-container {
+	background-color: rgba(255,255,255,1);
+	width: 100%;
+	margin-left:0;
+	min-height: 800px;
+}
+
+.row {
+	max-width: 100%;
+	width: 100%;
+}
+
+.row.first {
+	margin-top: 6px;
+}
+
+.panel {
+	h1,h2,h3,h4,p,a,li,label {
+		color: $oil;
+	}
+	p {
+		font-size: 1.4em;
+	}
+	margin-bottom: 0;
+	background-color: rgba(0,0,0,0.2);
+	border-color: rgba(0,0,0,0.5);
+}
+
+.button.primary {
+	color: white;
+}
+
+
+
+
+
+
+/* Typography */
+
+p {
+	font-size: 1.3em;
+	line-height: 1.3;
+}
+
+
+
+
+/* links */
+
+.top-bar-section ul li:not(.has-form) a:not(.button) {
+  &:hover {
+    color: rgba(80,80,80,1);
+    background-color: $white;
+  }
+}
+
+/* sublinks */
+.top-bar-section .dropdown li:not(.has-form):not(.active) > a:not(.button) {
+	  &:hover {
+    color: rgba(80,80,80,1);
+    background-color: $white;
+  }
+}
+
+/* button groups */
+.f-dropdown.e-button-drop {
+ 	li{
+		width: 100%;
+	}
+}
+.f-open-dropdown {
+	
+}
+.panel-links {
+	ul {
+		width: 100%;
+	}
+	position: relative;
+	width: 100%;
+	bottom: 100%;
+	left: 0;
+}
+
+.orbit-container {
+	padding-top: 2em;
+	padding-bottom: 2em;
+	.orbit-slides-container {	
+		
+	}
+}
+
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 45px;
+    width: 100%;
+    background-color: $oil;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* user profile */
+
+#user-container {
+	padding-top: 25px;
+}
+
+.main-section {
+	min-height: 500px;
+}
+
+a.left-off-canvas-toggle{
+	color: $white;
+	display:block;
+}
+
+.user.panel {
+	margin-top: 35px;
+}
+
+h1.panel-title {
+	margin-bottom:25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* helpers */
+
+.mg-top {
+	margin-top: 20px;
+}
+
+
+
+
+
+
+
+/* Medium Screens - Inherits Small Screen Styles */
+
+@media only screen and (min-width: 768px) {
+	
+
+
+}
+
+
+
+
+
+
+
+
+/* Large Screens - Inherits Small & Medium Screen Styles */
+
+@media only screen and (min-width: 1024px) {
+
+
+
+}

@@ -1,0 +1,15 @@
+<% provide(:title, "All Users") %>
+
+<div class="row">
+	<div class="small-12 columns panel">
+		<h1>Users</h1>
+	</div>
+</div>
+
+<div class="row clearfix" id="user-container">
+	<% @users.each do |user| %>
+		<div class="small-12 large-4 columns">
+			<%= render user %>
+		</div>	
+	<% end %>
+</div>	

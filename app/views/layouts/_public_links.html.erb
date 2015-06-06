@@ -1,0 +1,18 @@
+      <li class="divider"></li>
+      <li>
+        <%= link_to root_path do %>
+          <i class="fi-home"></i>&nbsp;&nbsp;Home
+        <% end %>
+      </li>
+      <li class="divider"></li>
+      <li>
+        <%= link_to signup_path do %>
+          <i class="fi-torso"></i>&nbsp;&nbsp;Signup
+        <% end %>
+      </li>
+      <li class="divider"></li> 
+      <li>
+        <%= link_to login_path(current_user) do %>
+          <i class="fi-unlock"></i>&nbsp;&nbsp;Login
+        <% end %>
+      </li>             
