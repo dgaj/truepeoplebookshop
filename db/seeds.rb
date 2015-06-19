@@ -1,6 +1,6 @@
 admin = User.create!(	
 	name:  "admin",
-  email: "matthew.stewart.mi@gmail.com",
-	password:              "password",
-	password_confirmation: "password",
+  email: "admin@example.com",
+	password:              "apptivism",
+	password_confirmation: "apptivism",
 	admin: true)
