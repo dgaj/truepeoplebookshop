@@ -12,14 +12,13 @@ Install it and rename it, play with it, reinstall it, build apps with it.
 ## Installation OSX
 
 
-
 ###Clone Repository
 
 Open your Terminal, go to your root directory and clone the repo.
 
 ```
 $ cd
-$ git:clone -a https://github.com/apptivism/boilerplate.git
+$ git clone https://github.com/apptivism/boilerplate.git
 ```
 
 ###Change to project directory
