@@ -30,12 +30,12 @@ body {
 }
 
 footer {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 45px;
-    width: 100%;
-    background-color: $oil;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 45px;
+  width: 100%;
+  background-color: $oil;
 }
 
 
@@ -55,9 +55,6 @@ footer {
 }
 
 .panel {
-  h1,h2,h3,h4,p,a,li,label {
-    color: $oil;
-  }
   p {
     font-size: 1.4em;
   }
@@ -112,6 +109,17 @@ footer {
 }
 
 
+/* user index */
+
+#user-list {
+  
+}
+
+.user-list-item {
+  .user-list-item-name {
+    color: $primary-color;
+  }
+}
 
 
 

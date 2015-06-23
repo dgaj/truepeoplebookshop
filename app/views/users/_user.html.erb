@@ -1,6 +1,8 @@
-<%= link_to user_path(user.id) do %>
-	<h2>
-		<%= image_tag user.picture.url, style: "height:1em;" if user.picture? %>
-		<%= user.name %>
-	</h2>
-<% end %>
+<div class="user-list-item">
+	<%= link_to user_path(user.id) do %>
+		<h2 class="user-list-item-name">
+			<%= image_tag user.picture.url, style: "height:1em;" if user.picture? %>
+			<%= user.name %>
+		</h2>
+	<% end %>
+</div>
