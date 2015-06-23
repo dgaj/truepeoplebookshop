@@ -3,6 +3,14 @@
 @import "custom_colors";
 
 
+/* Typography */
+
+p {
+  font-size: 1.3em;
+  line-height: 1.3;
+}
+
+
 /* Global Styles */
 
 html {
@@ -21,47 +29,46 @@ body {
 	min-height: 800px;
 }
 
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 45px;
+    width: 100%;
+    background-color: $oil;
+}
+
+
+
+
+
+/* foundation */
+
+
 .row {
-	max-width: 100%;
-	width: 100%;
+  max-width: 100%;
+  width: 100%;
 }
 
 .row.first {
-	margin-top: 6px;
+  margin-top: 6px;
 }
 
 .panel {
-	h1,h2,h3,h4,p,a,li,label {
-		color: $oil;
-	}
-	p {
-		font-size: 1.4em;
-	}
-	margin-bottom: 0;
-	background-color: rgba(0,0,0,0.2);
-	border-color: rgba(0,0,0,0.5);
+  h1,h2,h3,h4,p,a,li,label {
+    color: $oil;
+  }
+  p {
+    font-size: 1.4em;
+  }
+  margin-bottom: 0;
+  background-color: rgba(0,0,0,0.2);
+  border-color: rgba(0,0,0,0.5);
 }
 
 .button.primary {
-	color: white;
+  color: white;
 }
-
-
-
-
-
-
-/* Typography */
-
-p {
-	font-size: 1.3em;
-	line-height: 1.3;
-}
-
-
-
-
-/* links */
 
 .top-bar-section ul li:not(.has-form) a:not(.button) {
   &:hover {
@@ -70,7 +77,6 @@ p {
   }
 }
 
-/* sublinks */
 .top-bar-section .dropdown li:not(.has-form):not(.active) > a:not(.button) {
 	  &:hover {
     color: rgba(80,80,80,1);
@@ -105,49 +111,13 @@ p {
 	}
 }
 
-footer {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 45px;
-    width: 100%;
-    background-color: $oil;
-}
-
-
-
-
-
-
-
-
-
 
 
 
 
 /* user profile */
 
-#user-container {
-	padding-top: 25px;
-}
 
-.main-section {
-	min-height: 500px;
-}
-
-a.left-off-canvas-toggle{
-	color: $white;
-	display:block;
-}
-
-.user.panel {
-	margin-top: 35px;
-}
-
-h1.panel-title {
-	margin-bottom:25px;
-}
 
 
 
@@ -173,7 +143,7 @@ h1.panel-title {
 
 /* Medium Screens - Inherits Small Screen Styles */
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 641px) {
 	
 
 
@@ -188,7 +158,7 @@ h1.panel-title {
 
 /* Large Screens - Inherits Small & Medium Screen Styles */
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1025px) {
 
 
 
