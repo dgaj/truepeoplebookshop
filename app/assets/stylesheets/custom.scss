@@ -2,6 +2,12 @@
 @import "custom_colors";
 @import "font-awesome";
 
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}
+
 /* Typography */
 
 p {
@@ -155,7 +161,14 @@ p.small {
 }
 
 
+/* miscellaneous */
 
+.debug_dump {
+  font-size: 1.5em;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
 
 
 
