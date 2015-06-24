@@ -94,38 +94,3 @@ To execute tests, run the following command in your applications root folder:
 ```
 $ bundle exec rake test
 ```
-
-### Configuring Tests?
-
-The tests occasionally will test for content such as title tags. For example:
-
-<i>test/controllers/static_pages_controller_test.rb</i>
-
-```ruby
-require 'test_helper'
-
-class StaticPagesControllerTest < ActionController::TestCase
-  
-  test "should get home" do
-    get :home
-    assert_response :success
-    assert_select "title", "Home - template" # This line tests for the home pages title tag
-  end
-
-  test "should get help" do
-    get :help
-    assert_response :success
-  end
-
-  test "should get about" do
-    get :about
-    assert_response :success
-  end
-
-end
-```
-
-If the title were to change, the test would break. For this reason, configuraton of the tests are necessary.
-
-
-###
