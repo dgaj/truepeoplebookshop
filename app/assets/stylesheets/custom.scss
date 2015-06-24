@@ -1,7 +1,6 @@
 @import "foundation_and_overrides";
-@import "foundation-icons";
 @import "custom_colors";
-
+@import "font-awesome";
 
 /* Typography */
 
@@ -139,7 +138,11 @@ p.small {
 
 
 
+/* font awesome */
 
+.fa-link-size {
+  font-size: 1.4em;
+}
 
 
 

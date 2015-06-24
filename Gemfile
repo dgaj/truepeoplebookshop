@@ -87,7 +87,6 @@ gem 'underscore-rails'
 gem 'uglifier',                '2.5.3'
 gem 'foundation-rails'
 gem 'coffee-rails',            '4.1.0'
-gem 'foundation-icons-sass-rails'
 gem 'fittextjs_rails'
 gem 'jquery-rails',            '4.0.3'
 gem 'turbolinks',              '2.3.0'
@@ -103,6 +102,8 @@ gem 'roo-xls'
 gem "paperclip", "~> 4.2"
 gem 'videojs_rails'
 gem 'will_paginate-foundation'
+gem 'font-awesome-rails'
+
 
 group :development do
 	# Entity Relationship Diagrams
@@ -115,6 +116,12 @@ group :development, :test do
   gem 'byebug',      '3.4.0'
   gem 'web-console', '2.0.0.beta3'
   gem 'spring',      '1.1.3'
+end
+
+group :production do
+  gem 'pg',             '0.17.1'
+  gem 'rails_12factor', '0.0.2'
+  gem 'puma',           '2.11.1'
 end
 
 group :test do

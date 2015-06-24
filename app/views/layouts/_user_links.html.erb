@@ -1,46 +1,40 @@
       <li class="divider"></li>
       <li>
         <%= link_to root_path do %>
-          <i class="fi-home"></i>&nbsp;&nbsp;Home
+          <i class="fa fa-home fa-link-size">&nbsp;&nbsp;Home</i>
         <% end %>
       </li>
-      <li class="divider"></li>
-      <li>
-        <%= link_to about_path do %>
-          <i class="fi-results-demographics"></i>&nbsp;&nbsp;About
-        <% end %>
-      </li>
-      <li class="divider"></li>
-      <li>
-        <%= link_to help_path do %>
-          <i class="fi-alert"></i>&nbsp;&nbsp;Help
-        <% end %>
-      </li>            
-      <li class="divider"></li>
-      <li>
-        <%= link_to signup_path do %>
-          <i class="fi-torso"></i>&nbsp;&nbsp;Signup
-        <% end %>
-      </li>
-      <li class="divider"></li>     
+      <li class="divider"></li>  
       <li class="has-dropdown">
-        <%= link_to "Account", "#" %>
-        <ul class="dropdown">            
+        <%= link_to "#" do %>
+          <i class="fa fa-users fa-link-size">&nbsp;&nbsp;People</i>
+        <% end %>
+        <ul class="dropdown">
+          <li><%= link_to "Users", users_path %></li>
+        </ul>
+      </li>              
+      <li class="divider"></li>      
+      <li class="has-dropdown">
+        <%= link_to "#" do %>
+          <i class="fa fa-user fa-link-size">&nbsp;&nbsp;Me</i>
+        <% end %>
+        <ul class="dropdown">
           <li>
             <%= link_to user_path(current_user) do %>
               <i class="fi-torso"></i>&nbsp;&nbsp;Profile
             <% end %>
-          </li>
+          </li>          
           <li>
             <%= link_to edit_user_path(current_user) do %>
               <i class="fi-widget"></i>&nbsp;&nbsp;Settings
             <% end %>
-          </li>
+          </li>          
         </ul>
       </li>
-      <li class="divider"></li> 
+      <li class="divider"></li>
       <li>
         <%= link_to logout_path, method: "delete" do %>
-          <i class="fi-lock"></i>&nbsp;&nbsp;Logout
+          <i class="fa fa-sign-out fa-link-size">&nbsp;&nbsp;Logout</i>
         <% end %>
-      </li>              
+      </li> 
+      

@@ -1,34 +1,23 @@
       <li class="divider"></li>
       <li>
         <%= link_to root_path do %>
-          <i class="fi-home"></i>&nbsp;&nbsp;Home
+          <i class="fa fa-home fa-link-size">&nbsp;&nbsp;Home</i>
         <% end %>
       </li>
       <li class="divider"></li>  
       <li class="has-dropdown">
-        <%= link_to "People", "#" %>
+        <%= link_to "#" do %>
+          <i class="fa fa-users fa-link-size">&nbsp;&nbsp;People</i>
+        <% end %>
         <ul class="dropdown">
           <li><%= link_to "Users", users_path %></li>
         </ul>
-      </li>        
-      <li class="divider"></li>  
-      <li class="has-dropdown">
-        <%= link_to "Places", "#" %>
-        <ul class="dropdown">     
-          <li><%= link_to "Link 1", "#" %></li>                  
-          <li class="has-dropdown">
-            <%= link_to "Link 2", "#" %>
-            <ul class="dropdown">                                   
-              <li><%= link_to "Link 2a", "#" %></li>
-              <li><%= link_to "Link 2b", "#" %></li>
-              <li><%= link_to "Link 2c", "#" %></li>
-            </ul>    
-          </li>                         
-        </ul>
-      </li>      
+      </li>              
       <li class="divider"></li>      
       <li class="has-dropdown">
-        <%= link_to "Me", "#" %>
+        <%= link_to "#" do %>
+          <i class="fa fa-user fa-link-size">&nbsp;&nbsp;Me</i>
+        <% end %>
         <ul class="dropdown">
           <li>
             <%= link_to user_path(current_user) do %>
@@ -45,7 +34,7 @@
       <li class="divider"></li>
       <li>
         <%= link_to logout_path, method: "delete" do %>
-          <i class="fi-lock"></i>&nbsp;&nbsp;Logout
+          <i class="fa fa-sign-out fa-link-size">&nbsp;&nbsp;Logout</i>
         <% end %>
       </li> 
       
