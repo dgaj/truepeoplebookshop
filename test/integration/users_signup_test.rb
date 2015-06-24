@@ -30,6 +30,8 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     end
     # Make sure the redirect led to the new users profile    
     assert_template 'users/show'
+    # Make sure user has a status of logged in
+    assert is_logged_in?
   end
 
 
