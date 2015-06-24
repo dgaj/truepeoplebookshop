@@ -1,7 +1,7 @@
 <% provide(:title, "Log In") %>
 
 <div class="row">
-  <div class="small-12 large-6 large-centered columns user panel clearfix"> 	
+  <div class="small-12 large-6 large-centered columns clearfix"> 	
     <%= form_for(:session, url: login_path) do |f| %>
 
       <div class="row">
@@ -40,6 +40,13 @@
       	</div>
       <% end %>
 
+      <div class="row">
+        <div class="small-8 small-offset-4 columns">
+          <%= link_to "forgot password?", new_password_reset_path,
+                                                     class: "text-center" %>
+        </div> 
+      </div>  
+
       <div class="row panel-links">
         <div class="small-12 large-12 large-centered columns mg-top">
   				<ul class="button-group even-2">
@@ -56,4 +63,4 @@
 
     <% end %>
   </div>
-</div>  
+</div>                                              
