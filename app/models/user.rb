@@ -10,8 +10,7 @@ class User < ActiveRecord::Base
                     format: { with: VALID_EMAIL_REGEX },
                     uniqueness: { case_sensitive: false }
   has_secure_password
-  # validates :password, length: { minimum: 6 }, allow_blank: true
-  validates :password, presence: true, length: { minimum: 6 }
+  validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
   mount_uploader :picture, PictureUploader
   validate  :picture_size
 

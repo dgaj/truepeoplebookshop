@@ -6,6 +6,12 @@
 	</div>
 </div>
 
+<div class="row">
+	<div class="small-12 columns">
+		<%= will_paginate @users, renderer: FoundationPagination::Rails %>
+	</div>
+</div>
+
 <div class="row clearfix" id="user-container">
 	<% @users.each do |user| %>
 		<div class="small-12 columns">
@@ -15,3 +21,9 @@
 		</div>	
 	<% end %>
 </div>	
+
+<div class="row">
+	<div class="small-12 columns">
+		<%= will_paginate @users, renderer: FoundationPagination::Rails %>
+	</div>
+</div>
