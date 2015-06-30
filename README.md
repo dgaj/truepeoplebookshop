@@ -94,3 +94,6 @@ To execute tests, run the following command in your applications root folder:
 ```
 $ bundle exec rake test
 ```
+
+
+

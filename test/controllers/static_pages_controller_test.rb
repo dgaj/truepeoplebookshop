@@ -8,7 +8,7 @@ class StaticPagesControllerTest < ActionController::TestCase
     # Make sure that the response is a 200 success                                  
     assert_response :success 
     # Make sure the title tag says "Home - template"                 
-    assert_select "title", "Home - template"
+    assert_select "title", "Home - Boilerplate"
   end
 
   test "should get help" do
@@ -17,7 +17,7 @@ class StaticPagesControllerTest < ActionController::TestCase
     # Make sure that the response is a 200 success      
     assert_response :success
     # Make sure the title tag says "Help - template"     
-    assert_select "title", "Help - template"
+    assert_select "title", "Help - Boilerplate"
   end
 
   test "should get about" do
@@ -26,7 +26,7 @@ class StaticPagesControllerTest < ActionController::TestCase
     # Make sure that the response is a 200 success      
     assert_response :success
     # Make sure the title tag says "About - template"     
-    assert_select "title", "About - template"
+    assert_select "title", "About - Boilerplate"
   end
 
   test "should get contact" do
@@ -35,7 +35,7 @@ class StaticPagesControllerTest < ActionController::TestCase
     # Make sure that the response is a 200 success      
     assert_response :success
     # Make sure the title tag says "Contact - template"     
-    assert_select "title", "Contact - template"
+    assert_select "title", "Contact - Boilerplate"
   end
 
 end

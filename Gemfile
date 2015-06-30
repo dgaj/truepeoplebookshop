@@ -59,7 +59,7 @@ gem 'sass-rails', '~> 5.0.3'
 
 
 gem 'execjs'
-gem 'therubyracer', :platforms => :ruby
+
 
 # Carousel
 
