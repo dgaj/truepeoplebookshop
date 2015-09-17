@@ -98,6 +98,8 @@ gem 'skrollr-rails'
 gem 'will_paginate-foundation'
 gem 'font-awesome-rails'
 
+gem 'responders'
+
 
 group :development do
 	# Entity Relationship Diagrams

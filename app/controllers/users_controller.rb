@@ -5,6 +5,10 @@ class UsersController < ApplicationController
 
   def index
     @users = User.paginate(:page => params[:page], :per_page => 20)
+    respond_to do |format|
+      format.html 
+      format.json { render 'index', formats: [:json], handlers: [:jbuilder], status: 200 }
+    end
   end
 
   def show
