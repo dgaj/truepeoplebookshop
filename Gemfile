@@ -93,14 +93,8 @@ gem 'turbolinks',              '2.3.0'
 gem 'jquery-turbolinks'
 gem 'jbuilder',                '2.2.3'
 gem 'sdoc',                    '0.4.0', group: :doc
-gem 'best_in_place', '~> 3.0.1'
-gem 'responders', '~> 2.0'
 gem 'modernizr-rails'
 gem 'skrollr-rails'
-gem 'roo', '~> 2.0.0'
-gem 'roo-xls'
-gem "paperclip", "~> 4.2"
-gem 'videojs_rails'
 gem 'will_paginate-foundation'
 gem 'font-awesome-rails'
 
